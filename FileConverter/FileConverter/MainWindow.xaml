@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="File Converter" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem x:Name="MenuItem_OpenFile" Header="Open File..." Click="MenuItem_OpenFile_Click"/>
+                <MenuItem x:Name="MenuItem_SaveFile" Header="Save File" Click="MenuItem_SaveFile_Click"/>
+                <MenuItem x:Name="MenuItem_SaveFileAs" Header="Save File As..." Click="MenuItem_SaveFileAs_Click"/>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Quit" Header="Quit" Click="MenuItem_Quit_Click"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
