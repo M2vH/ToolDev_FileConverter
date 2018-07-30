@@ -265,6 +265,7 @@ namespace FileConverter
             
             saveFileDialog.FileName = "lamp.xml";
 
+
             //using (FileStream fs = new FileStream("lamp.xml", FileMode.Create))
             //{
 
@@ -275,7 +276,10 @@ namespace FileConverter
             //    }
             //}
             //saveFileDialog.OpenFile();
-            m_xmlDocument.Save(saveFileDialog.OpenFile());
+            saveFileDialog.ShowDialog();
+            
+            
+            m_xmlDocument.Save(saveFileDialog.FileName);
         }
 
         private void MenuItem_SaveFileAs_Click(object sender, RoutedEventArgs e)
