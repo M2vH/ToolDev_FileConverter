@@ -284,6 +284,17 @@ namespace FileConverter
 
         private void MenuItem_SaveFileAs_Click(object sender, RoutedEventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.CreatePrompt = true;
+            saveFileDialog.CheckFileExists = false;
+            saveFileDialog.CheckPathExists = false;
+
+            saveFileDialog.FileName = "lamp.xml";
+
+            saveFileDialog.ShowDialog();
+
+
+            m_xmlDocument.Save(saveFileDialog.FileName);
 
         }
 
