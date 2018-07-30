@@ -8,8 +8,8 @@
         Title="File Converter" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Header="File">
@@ -20,5 +20,17 @@
                 <MenuItem x:Name="MenuItem_Quit" Header="Quit" Click="MenuItem_Quit_Click"/>
             </MenuItem>
         </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0">
+                <TextBlock x:Name="TextBlock_obj"/>
+            </ScrollViewer>
+            <ScrollViewer Grid.Column="1">
+                <TextBlock x:Name="TextBlock_xml"/>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
